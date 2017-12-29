@@ -1,2 +1,2 @@
 # Colorful Animations
-[<div>star</div><div>![star](images/star.png)</div>](star/index.html)
+[![star](images/star.png)](star/index.html)
