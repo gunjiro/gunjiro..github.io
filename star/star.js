@@ -15,10 +15,9 @@ function draw() {
         for (var i = 0; i < 10; i++) {
             for (var r = 90; r <= 110; r += 1) {
                 point = star(r, rate);
-                context.strokeStyle = "hsl(" + (360 * rate) + ", 100%, 50%)"
+                context.fillStyle = "hsl(" + (360 * rate) + ", 100%, 50%)"
                 context.beginPath();
-                context.moveTo(point.x, point.y);
-                context.lineTo(point.x, point.y);
+                context.fillRect(point.x, point.y, 1, 1);
                 context.closePath();
                 context.stroke();
             }
