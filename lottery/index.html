@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.15/lodash.min.js"></script>
+    <script src="./lottery.js"></script>
+    <title>くじ引き</title>
+  </head>
+  <body>
+    <div>
+      <label for="members">メンバー</label>
+      <textarea id="members" cols="30" rows="10"></textarea>
+
+      <label for="marks">くじ</label>
+      <textarea id="marks" cols="30" rows="10"></textarea>
+      <button id="look" type="button">結果を見る</button>
+      <div>
+        <span>結果</span>
+        <span id="result"></span>
+      </div>
+    </div>
+  </body>
+</html>
