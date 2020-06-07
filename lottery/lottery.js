@@ -7,8 +7,8 @@ window.addEventListener(
     button.addEventListener(
       "click",
       function() {
-        var membersText = document.getElementById("members").value;
-        var marksText = document.getElementById("marks").value;
+        var membersText = getMembersText();
+        var marksText = getMarksText();
 
         var members = textToArray(membersText);
         var marks = textToArray(marksText);
@@ -16,7 +16,7 @@ window.addEventListener(
         if (members.length > marks.length) {
           marks = _.concat(
             marks,
-            _.fill(new Array(members.length - marks.length), "")
+            createEmptyMarks(members.length - marks.length)
           );
         }
 
@@ -36,6 +36,18 @@ window.addEventListener(
   },
   false
 );
+
+function getMembersText() {
+  return document.getElementById("members").value;
+}
+
+function getMarksText() {
+  return document.getElementById("marks").value;
+}
+
+function createEmptyMarks(length) {
+  return _.fill(new Array(length), "");
+}
 
 function textToArray(text) {
   return text
